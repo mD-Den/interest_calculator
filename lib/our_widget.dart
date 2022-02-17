@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:interest_calculator/widgets/reset.dart';
 import 'package:interest_calculator/widgets/result_text.dart';
+import 'package:interest_calculator/widgets/second_operation.dart';
 
 class FirstCont extends StatefulWidget {
   final _controllerOne = TextEditingController();
@@ -15,13 +16,11 @@ class FirstCont extends StatefulWidget {
 
   int get count => id;
 
-  Widget widget;
-
-  FirstCont(
-      {@required this.id,
-      @required this.labelOne,
-      @required this.labelTwo,
-      @required this.widget});
+  FirstCont({
+    @required this.id,
+    @required this.labelOne,
+    @required this.labelTwo,
+  });
 
   @override
   State<FirstCont> createState() => _FirstContState();
@@ -91,6 +90,7 @@ class _FirstContState extends State<FirstCont> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 10),
       color: Colors.blue,
       child: Column(children: <Widget>[
         Row(
@@ -146,7 +146,12 @@ class _FirstContState extends State<FirstCont> {
                     ),
                     child: Container(
                       decoration: BoxDecoration(color: Colors.black26),
-                      child: Center(child: widget.widget),
+                      child: Center(
+                        child: SecondOperationText(
+                          id: widget.id,
+                          totalScore: totalScore,
+                        ),
+                      ),
                     )),
               ),
               ResetWid(_resetScore)

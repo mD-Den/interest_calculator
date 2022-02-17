@@ -13,7 +13,7 @@ class ResultWidget extends StatelessWidget {
         child: FittedBox(
             child: Text(
           S.of(context).result,
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.bodyText1,
         )));
   }
 }

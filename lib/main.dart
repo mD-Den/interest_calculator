@@ -36,12 +36,16 @@ class MyApp extends StatelessWidget {
             ),
           ),
           textTheme: TextTheme(
-            subtitle1: TextStyle(
-                fontSize: 18,
+              subtitle1: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'SourceSerif'),
+              bodyText1: TextStyle(
+                fontSize: 25,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'SourceSerif,'),
-          ),
+              )),
         ),
         home: HomePage());
   }
