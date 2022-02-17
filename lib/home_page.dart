@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interest_calculator/widgets/second_operation.dart';
 
 import 'generated/l10n.dart';
 import 'our_widget.dart';
@@ -30,6 +31,7 @@ class HomePage extends StatelessWidget {
             id: 2,
             labelOne: S.of(context).label_two1,
             labelTwo: S.of(context).label_two2,
+            widget: SecondOperationText(2, 2),
           ),
           const SizedBox(
             height: 10,

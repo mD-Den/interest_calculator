@@ -7,14 +7,21 @@ import 'package:interest_calculator/widgets/result_text.dart';
 class FirstCont extends StatefulWidget {
   final _controllerOne = TextEditingController();
   final _controllerTwo = TextEditingController();
-  String labelOne;
-  String labelTwo;
+  final String labelOne;
+  final String labelTwo;
 
-  final int id;
+  final id;
   final double totalScore = 0.0;
 
+  int get count => id;
+
+  Widget widget;
+
   FirstCont(
-      {@required this.id, @required this.labelOne, @required this.labelTwo});
+      {@required this.id,
+      @required this.labelOne,
+      @required this.labelTwo,
+      @required this.widget});
 
   @override
   State<FirstCont> createState() => _FirstContState();
@@ -139,18 +146,7 @@ class _FirstContState extends State<FirstCont> {
                     ),
                     child: Container(
                       decoration: BoxDecoration(color: Colors.black26),
-                      child: Center(
-                          child: Text(
-                        totalScore
-                            .toString()
-                            .replaceAll(RegExp(r'([.]*0)(?!.*\d)'), ""),
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 23,
-                        ),
-                        maxLines: 1,
-                      )),
+                      child: Center(child: widget.widget),
                     )),
               ),
               ResetWid(_resetScore)
