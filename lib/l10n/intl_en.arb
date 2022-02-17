@@ -1,0 +1,13 @@
+{
+    "app_bar_title": "Interest Calculator",
+    "random_text": "AAAAAA",
+    "result": "Result",
+    "label_one1": "%",
+    "label_two1": "Number",
+    "label_three1": "Add %",
+    "label_four1": "Take away %",
+    "label_one2": "From the number of",
+    "label_two2": "From the number of",
+    "label_three2": "To the number of",
+    "label_four2": "From the number of"
+}

@@ -1,0 +1,13 @@
+{
+    "app_bar_title": "Калькулятор Процентов",
+    "random_text": "ББББББ",
+    "result": "РЕЗУЛЬТАТ:",
+    "label_one1": "%",
+    "label_two1": "Число",
+    "label_three1": "Прибавить %",
+    "label_four1": "Отнять %",
+    "label_one2": "От числа",
+    "label_two2": "От числа",
+    "label_three2": "К числу",
+    "label_four2": "От числа"
+}
