@@ -91,7 +91,7 @@ class _FirstContState extends State<FirstCont> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 10),
-      color: Colors.blue,
+      color: Colors.blue[300],
       child: Column(children: <Widget>[
         Row(
           children: <Widget>[
