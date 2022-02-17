@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         title: "Калькулятор процентов",
         theme: ThemeData(
           inputDecorationTheme: InputDecorationTheme(
-            labelStyle: TextStyle(color: Colors.yellow, fontSize: 22),
+            labelStyle: TextStyle(color: Colors.black87, fontSize: 22),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.white30, width: 2),
             ),

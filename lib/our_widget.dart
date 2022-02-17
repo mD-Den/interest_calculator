@@ -1,7 +1,7 @@
-import 'package:decimal/decimal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:interest_calculator/widgets/reset.dart';
 import 'package:interest_calculator/widgets/result_text.dart';
 
 class FirstCont extends StatefulWidget {
@@ -45,7 +45,7 @@ class _FirstContState extends State<FirstCont> {
         final firstSummand = double.parse(widget._controllerOne.text);
         final secondSummand = double.parse(widget._controllerTwo.text);
         setState(() {
-          totalScore = (firstSummand * 100) / secondSummand;
+          totalScore = firstSummand / secondSummand * 100;
         });
         break;
       case 3:
@@ -73,47 +73,12 @@ class _FirstContState extends State<FirstCont> {
     }
   }
 
-  String _labelText1() {
-    switch (widget.id) {
-      case 1:
-        return s = "%";
-        break;
-      case 2:
-        return s = "Число";
-        break;
-      case 3:
-        return s = "Прибавить %";
-        break;
-      case 4:
-        return s = "Отнять %";
-        break;
-      default:
-        return "";
-    }
-  }
-
-  String _labelText2() {
-    String s = "";
-    switch (widget.id) {
-      case 1:
-        return s;
-      case 2:
-        return s;
-      case 3:
-        return s;
-      case 4:
-        return s;
-    }
-  }
-
   void _resetScore() {
     setState(() {
-      widget._controllerOne.text = "0.0";
-      widget._controllerTwo.text = "0.0";
-      totalScore = 0.0;
+      widget._controllerOne.text = "";
+      widget._controllerTwo.text = "";
+      totalScore = 0;
     });
-    print(Decimal.parse('0.2') + Decimal.parse('0.1'));
-    print(0.2 + 0.1);
   }
 
   @override
@@ -131,7 +96,7 @@ class _FirstContState extends State<FirstCont> {
                   decoration: InputDecoration(
                     fillColor: Colors.black12,
                     filled: true,
-                    hintText: widget.labelOne,
+                    labelText: widget.labelOne,
                   ),
                   controller: widget._controllerOne,
                   keyboardType: TextInputType.number,
@@ -148,7 +113,6 @@ class _FirstContState extends State<FirstCont> {
                     fillColor: Colors.black12,
                     filled: true,
                     labelText: widget.labelTwo,
-                    // Как передать текст?
                   ),
                   controller: widget._controllerTwo,
                   keyboardType: TextInputType.number,
@@ -185,6 +149,7 @@ class _FirstContState extends State<FirstCont> {
                           fontWeight: FontWeight.bold,
                           fontSize: 23,
                         ),
+                        maxLines: 1,
                       )),
                     )),
               ),
@@ -193,25 +158,6 @@ class _FirstContState extends State<FirstCont> {
           ),
         )
       ]),
-    );
-  }
-}
-
-class ResetWid extends StatelessWidget {
-  Function function;
-
-  ResetWid(this.function);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15),
-      padding: EdgeInsets.all(0),
-      decoration: BoxDecoration(
-        border: Border.all(width: 2),
-      ),
-      width: 60,
-      child: IconButton(onPressed: function, icon: const Icon(Icons.refresh)),
     );
   }
 }
