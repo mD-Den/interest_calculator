@@ -7,13 +7,20 @@ class ResultWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: const EdgeInsets.all(10),
-        width: 120,
-        child: FittedBox(
-            child: Text(
-          S.of(context).result,
-          style: Theme.of(context).textTheme.bodyText1,
-        )));
+    return Padding(
+      padding: const EdgeInsets.only(right: 10),
+      child: Container(
+          margin: EdgeInsets.only(right: 3),
+          decoration: BoxDecoration(
+              border: Border.all(width: 2),
+              borderRadius: BorderRadius.circular(10)),
+          padding: const EdgeInsets.all(8),
+          width: 120,
+          child: FittedBox(
+              child: Text(
+            S.of(context).result,
+            style: Theme.of(context).textTheme.subtitle2,
+          ))),
+    );
   }
 }
