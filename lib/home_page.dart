@@ -8,8 +8,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromRGBO(252, 181, 159, 1),
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(250, 202, 187, 1),
         title: Text(
           S.of(context).app_bar_title,
           style: Theme.of(context).textTheme.bodyText1,

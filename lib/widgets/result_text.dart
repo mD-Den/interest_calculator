@@ -12,6 +12,7 @@ class ResultWidget extends StatelessWidget {
       child: Container(
           margin: EdgeInsets.only(right: 3),
           decoration: BoxDecoration(
+              color: Color.fromRGBO(252, 181, 159, 1),
               border: Border.all(width: 2),
               borderRadius: BorderRadius.circular(10)),
           padding: const EdgeInsets.all(8),

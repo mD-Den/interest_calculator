@@ -23,32 +23,36 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: "Калькулятор процентов",
         theme: ThemeData(
+          primaryColor: Color.fromRGBO(254, 219, 208, 1),
           inputDecorationTheme: InputDecorationTheme(
             labelStyle: TextStyle(color: Colors.black87, fontSize: 22),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white30, width: 2),
+              borderSide:
+                  BorderSide(color: Color.fromRGBO(68, 44, 46, 1), width: 2),
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black54, width: 5),
+              borderSide:
+                  BorderSide(color: Color.fromRGBO(68, 44, 46, 1), width: 5),
             ),
             border: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.red, width: 5),
+              borderSide:
+                  BorderSide(color: Color.fromRGBO(68, 44, 46, 1), width: 5),
             ),
           ),
           textTheme: TextTheme(
               subtitle1: TextStyle(
                   fontSize: 22,
-                  color: Colors.white,
+                  color: Color.fromRGBO(68, 44, 46, 1),
                   fontWeight: FontWeight.bold,
                   fontFamily: 'SourceSerif'),
               subtitle2: TextStyle(
                   fontSize: 22,
-                  color: Colors.black,
+                  color: Color.fromRGBO(68, 44, 46, 1),
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'SourceSerif'),
+                  fontFamily: 'Roboto'),
               bodyText1: TextStyle(
                 fontSize: 25,
-                color: Colors.white,
+                color: Color.fromRGBO(68, 44, 46, 1),
                 fontWeight: FontWeight.bold,
               )),
         ),

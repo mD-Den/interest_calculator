@@ -10,17 +10,6 @@ class SecondOperationText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (id == 2) {
-      // return RichText(
-      //     maxLines: 1,
-      //     text:
-      //         TextSpan(style: Theme.of(context).textTheme.subtitle1, children: [
-      //       TextSpan(
-      //         text: totalScore
-      //             .toString()
-      //             .replaceAll(RegExp(r'([.]*0)(?!.*\d)'), ""),
-      //       ),
-      //       TextSpan(text: "5555")
-      //     ]));
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -50,11 +39,7 @@ class SecondOperationText extends StatelessWidget {
     } else {
       return Text(
         totalScore.toString().replaceAll(RegExp(r'([.]*0)(?!.*\d)'), ""),
-        style: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 23,
-        ),
+        style: Theme.of(context).textTheme.subtitle1,
         maxLines: 1,
       );
     }

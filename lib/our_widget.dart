@@ -91,7 +91,7 @@ class _FirstContState extends State<FirstCont> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 10),
-      color: Colors.blue[300],
+      color: Color.fromRGBO(250, 202, 187, 1),
       child: Column(children: <Widget>[
         Row(
           children: <Widget>[
@@ -101,7 +101,7 @@ class _FirstContState extends State<FirstCont> {
                 child: TextField(
                   inputFormatters: [LengthLimitingTextInputFormatter(10)],
                   decoration: InputDecoration(
-                    fillColor: Colors.black12,
+                    fillColor: Color.fromRGBO(252, 181, 159, 1),
                     filled: true,
                     labelText: widget.labelOne,
                   ),
@@ -117,7 +117,7 @@ class _FirstContState extends State<FirstCont> {
                 child: TextField(
                   inputFormatters: [LengthLimitingTextInputFormatter(10)],
                   decoration: InputDecoration(
-                    fillColor: Colors.black12,
+                    fillColor: Color.fromRGBO(252, 181, 159, 1),
                     filled: true,
                     labelText: widget.labelTwo,
                   ),
@@ -139,18 +139,16 @@ class _FirstContState extends State<FirstCont> {
                     height: 70,
                     width: 240,
                     decoration: BoxDecoration(
+                      color: Color.fromRGBO(252, 181, 159, 1),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         width: 2,
                       ),
                     ),
-                    child: Container(
-                      decoration: BoxDecoration(color: Colors.black26),
-                      child: Center(
-                        child: SecondOperationText(
-                          id: widget.id,
-                          totalScore: totalScore,
-                        ),
+                    child: Center(
+                      child: SecondOperationText(
+                        id: widget.id,
+                        totalScore: totalScore,
                       ),
                     )),
               ),
