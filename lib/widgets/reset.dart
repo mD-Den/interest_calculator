@@ -15,7 +15,8 @@ class ResetWid extends StatelessWidget {
           border: Border.all(width: 2),
           borderRadius: BorderRadius.circular(10)),
       width: 60,
-      child: IconButton(onPressed: function, icon: const Icon(Icons.refresh)),
+      child: IconButton(
+          iconSize: 30, onPressed: function, icon: const Icon(Icons.refresh)),
     );
   }
 }
